@@ -1,0 +1,104 @@
+baseURL: "https://attackpath.sh/"
+locale: "en-us"
+title: "attackpath.sh"
+theme: "PaperMod"
+
+defaultContentLanguage: "en"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+pagination:
+  pagerSize: 10
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: "attackpath.sh"
+  description: "Offensive security notes, writeups, and methodology."
+  keywords: [pentest, writeups, hackthebox, red team, security]
+  author: "Gonzalo Puchades"
+  DateFormat: "2006-01-02"
+  defaultTheme: dark
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowToc: true
+  TocOpen: false
+  ShowRssButtonInSectionTermList: false
+  hidemeta: false
+  comments: false
+
+  homeInfoParams:
+    Title: "Attack Path"
+    Content: >
+      Exploring offensive security through hands-on research, penetration testing write-ups, vulnerability analysis, and real-world attack techniques.
+
+      By Gonzalo Puchades — OSCP+, PenTest+, eJPT, Security+.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/oph3x"
+    - name: linkedin
+      url: "https://linkedin.com/in/gonzalo-puchades-lopez/"
+    - name: hackthebox
+      url: "https://profile.hackthebox.com/profile/019d9d2e-49cb-7002-9d92-b814f71588e5"
+
+  assets:
+    disableHLJS: true
+    favicon: "/favicon.ico"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    threshold: 0.3
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: writeups
+      name: Writeups
+      url: /writeups/
+      weight: 10
+    - identifier: notes
+      name: Notes
+      url: /notes/
+      weight: 20
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 30
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 40
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 50
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: github-dark
+    tabWidth: 4
